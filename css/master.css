@@ -1,0 +1,213 @@
+body, ul, li, nav, div, h1, main, img, a, figure, h2, p, article, section, h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  background: transparent;
+  color: inherit;
+  box-sizing: inherit;
+  font: inherit;
+  display: block;
+}
+
+.cf:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 22px;
+  color: #473335;
+}
+
+a {
+  display: inline-block;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: right;
+  padding: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFC7;
+}
+
+.nav > ul, .footer > ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.nav {
+  background: #B0413E;
+  color: #FCAA67;
+}
+
+.footer {
+  background: #FCAA67;
+  color: #B0413E;
+}
+
+.overview {
+  text-align: right;
+}
+
+.overview p {
+  margin: 10px;
+}
+
+.overview {
+  min-height: calc(100vh - 98px);
+}
+
+.overview header {
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.overview .header-text {
+  min-width: 260px;
+}
+
+.contact-subheading > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-subheading li {
+  padding: 0 10px 10px 0;
+}
+
+.profile_image {
+  display: none;
+}
+
+.footer li, .nav li {
+  margin: auto 0;
+}
+
+.nav a, .footer a {
+  padding: 6px 8px;
+}
+
+.nav a:hover, .footer a:hover {
+  border-radius: 5px;
+  transition: background 0.5s ease;
+}
+
+.nav a:hover {
+  background: #FCAA67;
+  color: #B0413E;
+}
+
+.footer a:hover {
+  background: #B0413E;
+  color: #FCAA67;
+}
+
+.skills-wrapper {
+  text-align: center;
+}
+
+.skills-wrapper h2 {
+  padding: 10px 0;
+  font-size: 28px;
+}
+
+.skills-wrapper article {
+  border-top: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.resume_skill {
+  padding: 3px 5px;
+  border-radius: 5px;
+  background: #FCAA67;
+  display: inline-block;
+  margin: 5px;
+}
+
+.resume_skill--credential {
+  background: #548687;
+  color: #FCAA67;
+}
+
+.resume h2 {
+  font-size: 30px;
+  padding: 3px 5px;
+}
+
+.resume_item {
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+  background: #548687;
+}
+
+.resume_item > h3 {
+  font-size: 30px;
+  color: #FCAA67;
+}
+
+.resume_item > h3:hover {
+  color: #B0413E;
+}
+
+.resume_bullet {
+  font-size: 16px;
+}
+
+@media all and (min-width: 400px) {
+  .profile_image {
+    display: block;
+    max-height: 140px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .nav > ul, .footer > ul {
+    justify-content: flex-start;
+  }
+
+  /*.overview figure {
+    float: right;
+    padding-left: 10px;
+  }*/
+}
+
+@media all and (min-width: 800px) {
+
+  .overview p {
+    font-size: 28px;
+  }
+
+  /*.resume-bubble-skills, .resume-bubble-education {
+    flex: 0 1 50px;
+  }*/
+
+  .resume-bubble {
+    margin-right: 10px;
+    width: calc(50% - 10px);
+  }
+
+  .resume {
+    padding-right: 0;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .resume-bubble {
+    width: calc(33% - 10px);
+  }
+}

@@ -14,23 +14,27 @@ const Resume = React.createClass({
               let image;
               if (project.image_location) {
                 image = (
-                  <figure>
-                    <img src={project.image_location} alt={project.name+ ' image'} className='project_image'/>
+                  <figure className='project_image_container'>
+                    <a href={project.url ? project['url'] : project.repoUrl}>
+                      <img src={project.image_location} alt={project.name+ ' image'} className='project_image'/>
+                    </a>
                   </figure>
                 )
               }
               return (
-                <section key={project.name} className='resume_item'>
+                <section key={project.name} className='resume_item cf'>
                   {image}
-                  <h3><Link to={project.url ? project['url'] : project.repoUrl}>{project.name}</Link></h3>
-                  <p>{project.description}</p>
-                  <ul>
-                    {
-                      project.bullets.map( (point) => {
-                        return <li key={point} className='resume_bullet'>{point}</li>
-                      })
-                    }
-                  </ul>
+                  <div className='text-wrapper'>
+                    <h3><a href={project.url ? project['url'] : project.repoUrl}>{project.name}</a></h3>
+                    <p>{project.description}</p>
+                    <ul>
+                      {
+                        project.bullets.map( (point) => {
+                          return <li key={point} className='resume_bullet'>{point}</li>
+                        })
+                      }
+                    </ul>
+                  </div>
                 </section>
               )
             })
@@ -46,26 +50,6 @@ module.exports = Resume;
 
 
 //  <main className='resume cf'>
-//   <article className='resume-bubble resume-bubble_projects'>
-//     <h2>Projects</h2>
-//     {
-//       Constants.projects.map( (project) => {
-//         return (
-//           <section key={project.name} className='resume_item'>
-//             <h3><Link to={project.url ? project['url'] : project.repoUrl}>{project.name}</Link></h3>
-//             <p>{project.role}</p>
-//             <p>{project.description}</p>
-//             <ul>
-//               {
-//                 project.bullets.map( (point) => {
-//                   return <li key={point} className='resume_bullet'>{point}</li>
-//                 })
-//               }
-//             </ul>
-//           </section>
-//         )
-//       })
-//     }
 //   </article>
 //
 //   <article className='resume-bubble resume-bubble_work'>

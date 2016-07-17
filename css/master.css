@@ -12,7 +12,7 @@ body, ul, li, nav, div, h1, main, img, a, figure, h2, p, article, section, h3 {
 }
 
 .cf:after {
-  content: '';
+  content: ' ';
   display: block;
   clear: both;
 }
@@ -151,20 +151,28 @@ h1 {
   padding: 10px;
   margin: 0 10px 10px 10px;
   background: #548687;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.resume_item > h3 {
+.resume_item h3 {
   font-size: 30px;
   color: #FCAA67;
 }
 
-.resume_item > h3:hover {
+.resume_item h3:hover {
   color: #B0413E;
 }
 
+.project_image_container {
+  display: none;
+}
+
+/*
 .resume_bullet {
   font-size: 16px;
-}
+}*/
 
 @media all and (min-width: 400px) {
   .profile_image {
@@ -180,10 +188,15 @@ h1 {
     justify-content: flex-start;
   }
 
-  /*.overview figure {
+  .project_image {
+    max-height: 200px;
+    /*padding: 0 10px 0 0;*/
+  }
+
+  .project_image_container {
+    display: block;
     float: right;
-    padding-left: 10px;
-  }*/
+  }
 }
 
 @media all and (min-width: 800px) {

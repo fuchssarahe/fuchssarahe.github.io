@@ -4,7 +4,6 @@ const React = require('react'),
 
 const Resume = React.createClass({
   render: function () {
-    // <p>{project.role}</p>
     return (
       <main className='resume'>
         <article>
@@ -25,9 +24,10 @@ const Resume = React.createClass({
                 <section key={project.name} className='resume_item cf'>
                   {image}
                   <div className='text-wrapper'>
-                    <h3><a href={project.url ? project['url'] : project.repoUrl}>{project.name}</a></h3>
-                    <p>{project.description}</p>
-                    <ul>
+                    <h3><a href={project.url ? project['url'] : project.repoUrl}>{project.name}</a> - <a href={project.repoUrl}>github</a></h3>
+                    <p className='resume_item-tools'>({project.tools})</p>
+                    <p className='resume_item-subheading'>{project.description}</p>
+                    <ul className='resume_item-bullets'>
                       {
                         project.bullets.map( (point) => {
                           return <li key={point} className='resume_bullet'>{point}</li>
@@ -46,36 +46,3 @@ const Resume = React.createClass({
 });
 
 module.exports = Resume;
-
-
-
-//  <main className='resume cf'>
-//   </article>
-//
-//   <article className='resume-bubble resume-bubble_work'>
-//     <h2>Experience</h2>
-//     {
-//       Constants.work.map( (job) => {
-//         let responsibilities;
-//         if (job.responsibilities) {
-//           responsibilities = job.responsibilities
-//         }
-//         return (
-//           <section key={job.company} className='resume_item'>
-//             <h3>{job.role}</h3>
-//             <p>{job.company}</p>
-//             <p>{job.dateRange}</p>
-//             {responsibilities}
-//             <ul>
-//               {
-//                 job.bullets.map( (point) => {
-//                   return <li key={point} className='resume_bullet'>{point}</li>
-//                 })
-//               }
-//             </ul>
-//           </section>
-//         )
-//       })
-//     }
-//   </article>
-// </main>

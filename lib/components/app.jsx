@@ -21,7 +21,9 @@ const App = React.createClass({
             </ul>
           </nav>
         </header>
+
         {this.props.children}
+
         <footer className='footer'>
           <ul>
             {name}

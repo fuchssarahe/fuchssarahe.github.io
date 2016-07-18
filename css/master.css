@@ -61,6 +61,7 @@ h1 {
 .footer {
   border-top: 1px solid #73648A;
   color: #73648A;
+  padding-left: 5px;
 }
 
 .overview {
@@ -103,11 +104,22 @@ h1 {
 
 .footer li, .nav li {
   margin: auto 0;
+  font-size: 28px;
+  margin-right: 2px;
 }
 
-.nav a, .footer a {
+.footer li {
+  font-size: 22px;
+}
+
+.nav a {
+  padding: 8px 16px;
+}
+
+.footer a {
   padding: 6px 12px;
 }
+
 
 .nav a:hover, .selected-tab {
   border-radius: 5px;
@@ -164,11 +176,10 @@ h1 {
   margin-right: auto;
 }
 
-.resume_item h3 a{
+.resume_item h3 a {
   font-size: 30px;
   color: #ACD8AA;
   padding: 3px 5px;
-  border-radius: 5px;
 }
 
 .resume_item h3 a:hover {
@@ -176,18 +187,35 @@ h1 {
   transition: color 0.5s ease;
 }
 
+.resume_item-subheading {
+  font-style: italic;
+  font-size: 18px;
+}
+
 .project_image_container {
   display: none;
 }
 
-/*
+.resume_item-tools {
+  font-weight: bolder;
+}
+
 .resume_bullet {
   font-size: 16px;
-}*/
-
-.contact {
-  min-height: calc(100vh - 98px);
+  padding: 3px 5px;
 }
+
+.resume_bullet:before {
+  display: inline-block;
+  content: '⦿';
+  padding-right: 5px;
+  /*padding: 2px;*/
+  /*font-size: 32px;*/
+}
+
+/*.contact {
+  min-height: calc(100vh - 98px);
+}*/
 
 @media all and (min-width: 475px) {
   .profile_image {
@@ -206,6 +234,14 @@ h1 {
 @media all and (min-width: 600px) {
   .nav > ul, .footer > ul {
     justify-content: flex-start;
+  }
+
+  .nav a {
+    padding: 6px 12px;
+  }
+
+  .nav li{
+    font-size: 22px;
   }
 
   .project_image {

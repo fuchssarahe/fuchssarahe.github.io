@@ -40,15 +40,22 @@ h1 {
   flex-direction: column;
 }
 
-.nav > ul, .footer > ul {
+.nav > ul {
   display: flex;
-  justify-content: space-around;
   padding: 5px;
+}
+
+.footer > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav {
   color: #73648A;
   border-bottom: 1px solid #73648A;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {
@@ -57,21 +64,19 @@ h1 {
 }
 
 .overview {
-  text-align: right;
+  margin: auto;
+  max-width: 900px;
+  min-height: calc(100vh - 98px);
 }
 
 .overview p {
   margin: 10px;
 }
 
-.overview {
-  min-height: calc(100vh - 98px);
-}
-
 .overview header {
   display: flex;
-  text-align: right;
-  justify-content: flex-end;
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .overview .header-text {
@@ -89,7 +94,7 @@ h1 {
 }
 
 .contact-subheading li {
-  padding: 0 10px 10px 0;
+  padding: 0px 0 5px 10px;
 }
 
 .profile_image {
@@ -101,7 +106,7 @@ h1 {
 }
 
 .nav a, .footer a {
-  padding: 6px 8px;
+  padding: 6px 12px;
 }
 
 .nav a:hover, .selected-tab {
@@ -179,12 +184,21 @@ h1 {
   font-size: 16px;
 }*/
 
-@media all and (min-width: 400px) {
+.contact {
+  min-height: calc(100vh - 98px);
+}
+
+@media all and (min-width: 475px) {
   .profile_image {
     display: block;
-    max-height: 140px;
+    max-height: 200px;
     padding: 5px;
     border-radius: 10px;
+  }
+
+  .footer > ul {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 

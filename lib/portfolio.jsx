@@ -3,14 +3,12 @@ const ReactDOM = require('react-dom'),
       React = require('react'),
       App = require('./components/app'),
       Overview = require('./components/overview'),
-      Resume = require('./components/resume'),
-      Contact = require('./components/contact');
+      Resume = require('./components/resume');
 
 const routes = (
   <Route path='/' component={App}>
     <IndexRoute component={Overview} />
     <Route path='resume' component={Resume} />
-    <Route path='contact' component={Contact} />
   </Route>
 )
 

@@ -4,14 +4,21 @@ const React = require('react'),
 
 const App = React.createClass({
   render: function () {
+    let currentLocation = 'root';
+    if (window.location.hash.includes('resume')) {
+      currentLocation = 'resume';
+    } else if (window.location.hash.includes('contact')) {
+      currentLocation = 'contact';
+    }
+
     return (
       <div className='wrapper'>
         <header>
           <nav className='nav'>
             <ul>
-              <li><Link to='/'>Home</Link></li>
-              <li><Link to='/resume'>Projects</Link></li>
-              <li><Link to='/contact'>Contact</Link></li>
+              <li className={currentLocation === 'root' ? 'selected-tab' : ''}><Link to='/'>About Me</Link></li>
+              <li className={currentLocation === 'resume' ? 'selected-tab' : ''}><Link to='/resume'>Projects</Link></li>
+              <li className={currentLocation === 'contact' ? 'selected-tab' : ''}><Link to='/contact'>Contact</Link></li>
             </ul>
           </nav>
         </header>

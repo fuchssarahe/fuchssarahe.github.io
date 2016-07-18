@@ -39,10 +39,8 @@ const Overview = React.createClass({
                 <h2>Credentials</h2>
                 {
                   Constants.education.map( (schooling) => {
-                    // <p>{schooling.details}</p>
-                    // <p>{schooling.location}</p>
                     return (
-                      <section key={schooling.credential} className='resume_skill resume_skill--credential'>
+                      <section key={schooling.credential} className='resume_skill'>
                         <h3>{schooling.credential} - {schooling.date}</h3>
                       </section>
                     )

@@ -21,7 +21,7 @@ body {
   box-sizing: border-box;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 22px;
-  color: #473335;
+  color: #2E3532;
 }
 
 a {
@@ -38,7 +38,6 @@ h1 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  background: #FFFFC7;
 }
 
 .nav > ul, .footer > ul {
@@ -48,13 +47,13 @@ h1 {
 }
 
 .nav {
-  background: #B0413E;
-  color: #FCAA67;
+  color: #73648A;
+  border-bottom: 1px solid #73648A;
 }
 
 .footer {
-  background: #FCAA67;
-  color: #B0413E;
+  border-top: 1px solid #73648A;
+  color: #73648A;
 }
 
 .overview {
@@ -84,6 +83,11 @@ h1 {
   flex-direction: column;
 }
 
+.contact-subheading a:hover {
+  transition: color 0.5s ease;
+  color: #ACD8AA;
+}
+
 .contact-subheading li {
   padding: 0 10px 10px 0;
 }
@@ -100,19 +104,15 @@ h1 {
   padding: 6px 8px;
 }
 
-.nav a:hover, .footer a:hover {
+.nav a:hover, .selected-tab {
   border-radius: 5px;
   transition: background 0.5s ease;
-}
-
-.nav a:hover {
-  background: #FCAA67;
-  color: #B0413E;
+  background: lavender;
 }
 
 .footer a:hover {
-  background: #B0413E;
-  color: #FCAA67;
+ transition: color 0.5s ease;
+ color: #ACD8AA;
 }
 
 .skills-wrapper {
@@ -122,47 +122,52 @@ h1 {
 .skills-wrapper h2 {
   padding: 10px 0;
   font-size: 28px;
+  text-decoration: underline;
 }
 
 .skills-wrapper article {
-  border-top: 1px solid black;
   padding-bottom: 10px;
 }
 
 .resume_skill {
   padding: 3px 5px;
   border-radius: 5px;
-  background: #FCAA67;
+  background: lavender;
+  color: #73648A;
   display: inline-block;
   margin: 5px;
 }
 
-.resume_skill--credential {
-  background: #548687;
-  color: #FCAA67;
+.resume {
+  padding: 0 10px;
 }
 
 .resume h2 {
   font-size: 30px;
-  padding: 3px 5px;
+  padding: 10px 5px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .resume_item {
   padding: 10px;
   margin: 0 10px 10px 10px;
-  background: #548687;
+  background: lavender;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.resume_item h3 {
+.resume_item h3 a{
   font-size: 30px;
-  color: #FCAA67;
+  color: #ACD8AA;
+  padding: 3px 5px;
+  border-radius: 5px;
 }
 
-.resume_item h3:hover {
-  color: #B0413E;
+.resume_item h3 a:hover {
+  color: #73648A;
+  transition: color 0.5s ease;
 }
 
 .project_image_container {
@@ -190,7 +195,10 @@ h1 {
 
   .project_image {
     max-height: 200px;
-    /*padding: 0 10px 0 0;*/
+  }
+
+  .project_image:hover {
+    opacity: 0.8;
   }
 
   .project_image_container {
@@ -200,22 +208,9 @@ h1 {
 }
 
 @media all and (min-width: 800px) {
-
-  .overview p {
-    font-size: 28px;
-  }
-
-  /*.resume-bubble-skills, .resume-bubble-education {
-    flex: 0 1 50px;
-  }*/
-
   .resume-bubble {
     margin-right: 10px;
     width: calc(50% - 10px);
-  }
-
-  .resume {
-    padding-right: 0;
   }
 }
 

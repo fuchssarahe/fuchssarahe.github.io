@@ -145,6 +145,7 @@ h1 {
 
 .resume {
   padding: 0 10px;
+  min-height: calc(100vh - 98px);
 }
 
 .resume h2 {

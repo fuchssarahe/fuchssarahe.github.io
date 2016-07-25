@@ -18,6 +18,7 @@ const App = React.createClass({
             <ul>
               <li className={currentLocation === 'root' ? 'selected-tab' : ''}><Link to='/'>About&nbsp;Me</Link></li>
               <li className={currentLocation === 'resume' ? 'selected-tab' : ''}><Link to='/resume'>Projects</Link></li>
+              <li><a href='Sarah_Fuchs_Resume.pdf' target='_blank'>Resume</a></li>
             </ul>
           </nav>
         </header>

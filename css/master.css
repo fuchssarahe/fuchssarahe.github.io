@@ -31,7 +31,6 @@ a {
 h1 {
   font-size: 50px;
   font-weight: bold;
-  text-align: right;
   padding: 10px;
 }
 
@@ -148,9 +147,9 @@ h1 {
 
 .resume_skill {
   padding: 3px 5px;
-  border-radius: 5px;
   background: lavender;
-  color: #73648A;
+  /*color: #73648A;*/
+  color: lighten(#2E3532, 50%);
   display: inline-block;
   margin: 5px;
 }
@@ -160,11 +159,9 @@ h1 {
   min-height: calc(100vh - 98px);
 }
 
-.resume h2 {
-  font-size: 30px;
+.resume h1 {
   padding: 10px 5px;
   text-align: center;
-  text-decoration: underline;
 }
 
 .resume_item {

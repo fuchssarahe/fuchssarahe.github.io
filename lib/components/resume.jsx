@@ -7,7 +7,7 @@ const Resume = React.createClass({
     return (
       <main className='resume'>
         <article>
-          <h2>Personal Projects</h2>
+          <h1>Personal Projects</h1>
           {
             Constants.projects.map( (project) => {
               let image;

@@ -8,7 +8,6 @@ const ReactDOM = require('react-dom'),
 const routes = (
   <Route path='/' component={App}>
     <IndexRoute component={Overview} />
-    <Route path='resume' component={Resume} />
   </Route>
 )
 

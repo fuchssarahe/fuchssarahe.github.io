@@ -3,32 +3,6 @@ const React = require('react'),
 
 const Overview = React.createClass({
   render: function () {
-
-
-    // <div className='text-wrapper skills-wrapper'>
-    //     <article>
-    //       <h2>Background</h2>
-    //       <section className=''>
-    //         <ul>
-    //           {Constants.skills.web.map( (skill) => <li key={skill} className='resume_skill'>{skill}</li> ) }
-    //           {Constants.skills.engineering.map( (skill) => <li key={skill} className='resume_skill'>{skill}</li> ) }
-    //         </ul>
-    //       </section>
-    //     </article>
-    //
-    //     <article className=''>
-    //       <h2>Credentials</h2>
-    //       {
-    //         Constants.education.map( (schooling) => {
-    //           return (
-    //             <section key={schooling.credential} className='resume_skill'>
-    //               <h3>{schooling.credential} - {schooling.date}</h3>
-    //             </section>
-    //           )
-    //         })
-    //       }
-    //     </article>
-    //   </div>
     return (
       <main className='overview'>
         <div className='contact-wrapper'>

@@ -4,13 +4,6 @@ const React = require('react'),
 
 const App = React.createClass({
   render: function () {
-    let currentLocation = 'root';
-    let name;
-    if (window.location.hash.includes('resume')) {
-      currentLocation = 'resume';
-      name = (<li>{Constants.contact.name}:</li>);
-    }
-    
     return (
       <div className='wrapper'>
 
@@ -18,7 +11,6 @@ const App = React.createClass({
 
         <footer className='footer'>
           <ul>
-            {name}
             <li><a href={'mailto:' + Constants.contact.email}>{Constants.contact.email}</a></li>
             <li>{Constants.contact.phone}</li>
           </ul>

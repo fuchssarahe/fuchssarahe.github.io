@@ -2,8 +2,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 const ReactDOM = require('react-dom'),
       React = require('react'),
       App = require('./components/app'),
-      Overview = require('./components/overview'),
-      Resume = require('./components/resume');
+      Overview = require('./components/overview');
 
 const routes = (
   <Route path='/' component={App}>

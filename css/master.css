@@ -11,7 +11,7 @@ body, ul, li, div, h1, main, img, a, figure, h2, p, article, section, h3 {
   display: block;
 }
 
-.cf:after {
+.clearfix:after {
   content: ' ';
   display: block;
   clear: both;
@@ -28,40 +28,11 @@ a {
   display: inline-block;
 }
 
-h1 {
-  font-size: 50px;
-  font-weight: bold;
-  padding: 10px;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer > ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer {
-  border-top: 1px solid #73648A;
-  color: #73648A;
-  padding-left: 5px;
-}
-
 .overview {
   min-height: calc(100vh - 98px);
 }
 
-.contact {
-  padding-bottom: 10px;
-  margin: auto;
-  max-width: 900px;
-}
-
-.contact-wrapper {
+.overview_contact-wrapper {
   width: 100%;
   background: lavender;
 }
@@ -70,36 +41,108 @@ h1 {
   margin: 10px;
 }
 
-.overview header {
+.overview_contact {
+  padding-bottom: 10px;
+  margin: auto;
+  max-width: 900px;
+}
+
+.contact_header {
   display: flex;
   text-align: left;
   justify-content: flex-start;
 }
 
-.overview .header-text {
-  min-width: 260px;
+.contact_header h1 {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 10px;
 }
 
-.contact-subheading > ul {
-  display: flex;
-  flex-direction: column;
+.contact_image {
+  display: none;
+}
+
+.contact_subheading li {
+  padding: 0px 0 5px 10px;
+}
+
+.contact_subheading a:hover {
+  transition: color 0.5s ease;
+  color: #ACD8AA;
 }
 
 .contact_link > a {
   text-decoration: underline;
 }
 
-.contact-subheading a:hover {
-  transition: color 0.5s ease;
+.overview_projects {
+  padding: 0 10px;
+}
+
+.project {
+  padding: 10px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project:nth-child(2n) {
+  background: lavender;
+}
+
+.project h3 a {
+  font-size: 30px;
   color: #ACD8AA;
+  padding: 3px 5px;
 }
 
-.contact-subheading li {
-  padding: 0px 0 5px 10px;
+.project h3 a:hover {
+  color: #73648A;
+  transition: color 0.5s ease;
 }
 
-.profile_image {
+.project_subheading {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.project_tools {
+  font-weight: bolder;
+}
+
+.project_bullet {
+  font-size: 16px;
+  padding: 3px 5px;
+}
+
+.project_bullet:before {
+  display: inline-block;
+  content: '⦿';
+  padding-right: 5px;
+}
+
+.project_image-wrapper {
   display: none;
+}
+
+.project_image {
+  max-height: 200px;
+}
+
+.project_image:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  border-top: 1px solid #73648A;
+  color: #73648A;
+  padding-left: 5px;
+}
+
+.footer > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer li {
@@ -117,122 +160,19 @@ h1 {
  color: #ACD8AA;
 }
 
-.skills-wrapper {
-  text-align: center;
-}
-
-.skills-wrapper h2 {
-  padding: 10px 0;
-  font-size: 28px;
-  text-decoration: underline;
-}
-
-.skills-wrapper article {
-  padding-bottom: 10px;
-}
-
-.resume_skill {
-  padding: 3px 5px;
-  background: lavender;
-  color: lighten(#2E3532, 50%);
-  display: inline-block;
-  margin: 5px;
-}
-
-.resume {
-  padding: 0 10px;
-  min-height: calc(100vh - 98px);
-}
-
-.resume h1 {
-  padding: 10px 5px;
-  width: 900px;
-  margin: auto;
-  display: none;
-}
-
-.resume_item {
-  padding: 10px;
-  margin: 0 10px 10px 10px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.resume_item:nth-child(2n+1) {
-  background: lavender;
-}
-
-.resume_item h3 a {
-  font-size: 30px;
-  color: #ACD8AA;
-  padding: 3px 5px;
-}
-
-.resume_item h3 a:hover {
-  color: #73648A;
-  transition: color 0.5s ease;
-}
-
-.resume_item-subheading {
-  font-style: italic;
-  font-size: 18px;
-}
-
-.project_image_container {
-  display: none;
-}
-
-.resume_item-tools {
-  font-weight: bolder;
-}
-
-.resume_bullet {
-  font-size: 16px;
-  padding: 3px 5px;
-}
-
-.resume_bullet:before {
-  display: inline-block;
-  content: '⦿';
-  padding-right: 5px;
-}
 
 @media all and (min-width: 475px) {
-  .profile_image {
+  .contact_image {
     display: block;
     max-height: 200px;
     padding: 5px;
     border-radius: 10px;
   }
-
 }
 
 @media all and (min-width: 600px) {
-  .project_image {
-    max-height: 200px;
-  }
-
-  .project_image:hover {
-    opacity: 0.8;
-  }
-
-  .project_image_container {
+  .project_image-wrapper {
     display: block;
     float: right;
-  }
-}
-
-@media all and (min-width: 800px) {
-
-  .resume-bubble {
-    margin-right: 10px;
-    width: calc(50% - 10px);
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .resume-bubble {
-    width: calc(33% - 10px);
   }
 }

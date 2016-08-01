@@ -44,7 +44,7 @@ const Overview = React.createClass({
               <h2 className='contact-subheading'>
                 <ul>
                   <li><a href='mailto:${Constants.contact.email}'>{Constants.contact.email}</a></li>
-                  <li><a href={Constants.contact.linkedin}>LinkedIn</a> | <a href={Constants.contact.github}>Github</a> | <a href='Sarah_Fuchs_Resume.pdf' target='_blank'>Resume</a></li>
+                  <li className='contact_link'><a href={Constants.contact.linkedin}>LinkedIn</a> | <a href={Constants.contact.github}>Github</a> | <a href='Sarah_Fuchs_Resume.pdf' target='_blank'>Resume</a></li>
                   <li>{Constants.contact.location}</li>
                   <li>{Constants.contact.phone}</li>
                 </ul>

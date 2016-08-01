@@ -85,6 +85,10 @@ h1 {
   flex-direction: column;
 }
 
+.contact_link > a {
+  text-decoration: underline;
+}
+
 .contact-subheading a:hover {
   transition: color 0.5s ease;
   color: #ACD8AA;

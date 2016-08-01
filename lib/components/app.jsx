@@ -11,17 +11,17 @@ const App = React.createClass({
       name = (<li>{Constants.contact.name}:</li>);
     }
 
+    // <li className={currentLocation === 'resume' ? 'selected-tab' : ''}><Link to='/resume'>Projects</Link></li>
+    // <li className={currentLocation === 'root' ? 'selected-tab' : ''}><Link to='/'>About&nbsp;Me</Link></li>
+    // <header>
+    // <nav className='nav'>
+    // <ul>
+    // <li><a href='Sarah_Fuchs_Resume.pdf' target='_blank'>Resume</a></li>
+    // </ul>
+    // </nav>
+    // </header>
     return (
       <div className='wrapper'>
-        <header>
-          <nav className='nav'>
-            <ul>
-              <li className={currentLocation === 'root' ? 'selected-tab' : ''}><Link to='/'>About&nbsp;Me</Link></li>
-              <li className={currentLocation === 'resume' ? 'selected-tab' : ''}><Link to='/resume'>Projects</Link></li>
-              <li><a href='Sarah_Fuchs_Resume.pdf' target='_blank'>Resume</a></li>
-            </ul>
-          </nav>
-        </header>
 
         {this.props.children}
 

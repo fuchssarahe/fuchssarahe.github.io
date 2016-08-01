@@ -1,4 +1,4 @@
-body, ul, li, nav, div, h1, main, img, a, figure, h2, p, article, section, h3 {
+body, ul, li, div, h1, main, img, a, figure, h2, p, article, section, h3 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -39,22 +39,10 @@ h1 {
   flex-direction: column;
 }
 
-.nav > ul {
-  display: flex;
-  padding: 5px;
-}
-
 .footer > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.nav {
-  color: #73648A;
-  border-bottom: 1px solid #73648A;
-  display: flex;
-  justify-content: space-between;
 }
 
 .footer {
@@ -64,9 +52,18 @@ h1 {
 }
 
 .overview {
+  min-height: calc(100vh - 98px);
+}
+
+.contact {
+  padding-bottom: 10px;
   margin: auto;
   max-width: 900px;
-  min-height: calc(100vh - 98px);
+}
+
+.contact-wrapper {
+  width: 100%;
+  background: lavender;
 }
 
 .overview p {
@@ -101,29 +98,14 @@ h1 {
   display: none;
 }
 
-.footer li, .nav li {
-  margin: auto 0;
-  font-size: 28px;
-  margin-right: 2px;
-}
-
 .footer li {
+  margin: auto 0;
   font-size: 22px;
-}
-
-.nav a {
-  padding: 8px 16px;
+  margin-right: 2px;
 }
 
 .footer a {
   padding: 6px 12px;
-}
-
-
-.nav a:hover, .selected-tab {
-  border-radius: 5px;
-  transition: background 0.5s ease;
-  background: lavender;
 }
 
 .footer a:hover {
@@ -148,7 +130,6 @@ h1 {
 .resume_skill {
   padding: 3px 5px;
   background: lavender;
-  /*color: #73648A;*/
   color: lighten(#2E3532, 50%);
   display: inline-block;
   margin: 5px;
@@ -161,16 +142,21 @@ h1 {
 
 .resume h1 {
   padding: 10px 5px;
-  text-align: center;
+  width: 900px;
+  margin: auto;
+  display: none;
 }
 
 .resume_item {
   padding: 10px;
   margin: 0 10px 10px 10px;
-  background: lavender;
-  max-width: 800px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.resume_item:nth-child(2n+1) {
+  background: lavender;
 }
 
 .resume_item h3 a {
@@ -206,13 +192,7 @@ h1 {
   display: inline-block;
   content: '⦿';
   padding-right: 5px;
-  /*padding: 2px;*/
-  /*font-size: 32px;*/
 }
-
-/*.contact {
-  min-height: calc(100vh - 98px);
-}*/
 
 @media all and (min-width: 475px) {
   .profile_image {
@@ -222,25 +202,9 @@ h1 {
     border-radius: 10px;
   }
 
-  .footer > ul {
-    flex-direction: row;
-    justify-content: space-around;
-  }
 }
 
 @media all and (min-width: 600px) {
-  .nav > ul, .footer > ul {
-    justify-content: flex-start;
-  }
-
-  .nav a {
-    padding: 6px 12px;
-  }
-
-  .nav li{
-    font-size: 22px;
-  }
-
   .project_image {
     max-height: 200px;
   }
@@ -256,6 +220,7 @@ h1 {
 }
 
 @media all and (min-width: 800px) {
+
   .resume-bubble {
     margin-right: 10px;
     width: calc(50% - 10px);

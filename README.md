@@ -1,6 +1,6 @@
 # Hey!
 
-### Check out my portfolio here: [Sarah Fuchs](http://sarahfuchs.com/)
+### Check out my portfolio here: [Sarah Yasonik](http://sarahyasonik.com/)
 
 
 <!-- Color scheme found here:
